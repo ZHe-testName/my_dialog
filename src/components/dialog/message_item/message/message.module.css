@@ -1,0 +1,90 @@
+.message{
+    display: flex;
+    align-items: center;
+    margin-top: 5px;
+}
+
+.text{
+    max-width: 400px;
+    padding: 5px 8px;
+    border-radius: 5px;
+    word-break: break-all;
+    background-color: var(--accent-1);
+}
+
+.reverse .text{
+    color: var(--primary-color);
+    background-color: var(--primary);
+}
+
+.message:first-child .text {
+    padding-top: 7px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+  
+.message:last-child .text {
+    padding-bottom: 7px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+  
+.time {
+    font-size: 13px;
+    color: var(--accent-2);
+    margin-left: 10px;
+    opacity: 0;
+    visibility: hidden;
+  }
+  
+  .reverse .time {
+    margin-left: 0;
+    margin-right: 10px;
+  }
+  
+  .messageStatus,
+  .removeMessage {
+    margin-left: 10px;
+    cursor: pointer;
+    opacity: 0;
+    visibility: hidden;
+    flex-shrink: 0;
+  }
+  
+  .dialog svg.message-status {
+    display: none;
+  }
+  
+  .messageStatus {
+    margin-left: 5px;
+  }
+  
+  .messageStatus path {
+    fill: var(--primary);
+  }
+  
+  .removeMessage path {
+    fill: var(--error);
+  }
+  
+  .reverse .messageStatus,
+  .reverse .removeMessage {
+    margin-left: 0;
+    margin-right: 10px;
+  }
+  
+  .reverse .messageStatus {
+    margin-right: 5px;
+  }
+  
+.message:hover .time,
+.message:last-child .time,
+.reverse .message:last-child .messageStatus,
+.removable .message:hover .removeMessage{
+    opacity: 1;
+    visibility: visible;
+  }
+  
+.message:last-child .messageStatus {
+    display: block;
+  }
