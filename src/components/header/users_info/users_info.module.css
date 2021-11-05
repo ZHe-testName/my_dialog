@@ -1,0 +1,26 @@
+.userInfo{
+    margin: 0px auto;
+}
+
+.status{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    font-size: 13px;
+    text-align: center;
+    color: var(--accent-2);
+}
+
+.name{
+    text-align: center;
+}
+
+.circle{
+    border-radius: 50%;
+    width: 7px;
+    height: 7px;
+    margin-left: 5px;
+    margin-top: 2px;
+    background-color: var(--primary);
+}
