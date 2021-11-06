@@ -1,31 +1,30 @@
-const dialog = [
+const myAvatar = 'https://cdn1.flamp.ru/244e3482d83cc86917d4f007177a2b12.jpg',
+  herAvatar = 'https://i.pinimg.com/originals/e0/7e/cd/e07ecda8f4483bd45a4cb819a86a9fbd.jpg';
+
+const data = [
     {
-      avatar:
-        "https://sun9-2.userapi.com/c638729/v638729951/1d0ea/f9V7aJyh6tw.jpg",
+      avatar: herAvatar,
       message: "Привет",
       id: 0,
       date: "2020-10-11T10:09:04.712Z",
       is: "her",
     },
     {
-      avatar:
-        "https://sun9-2.userapi.com/c638729/v638729951/1d0ea/f9V7aJyh6tw.jpg",
+      avatar: herAvatar,
       message: "Как дела?",
       id: 1,
       date: "2020-10-11T10:19:04.712Z",
       is: "her",
     },
     {
-      avatar:
-        "https://sun9-2.userapi.com/c638729/v638729951/1d0ea/f9V7aJyh6tw.jpg",
+      avatar: herAvatar,
       message: "Я только приехал с Марса",
       id: 2,
       date: "2020-10-11T10:24:04.712Z",
       is: "her",
     },
     {
-      avatar:
-        "https://sun9-58.userapi.com/c836638/v836638514/867c/SPMigNB8gw0.jpg",
+      avatar: myAvatar,
       message: "Привет! Все хорошо, ты как?",
       id: 3,
       date: "2020-10-11T11:09:04.712Z",
@@ -33,8 +32,7 @@ const dialog = [
       is: "my",
     },
     {
-      avatar:
-        "https://sun9-58.userapi.com/c836638/v836638514/867c/SPMigNB8gw0.jpg",
+      avatar: myAvatar,
       message: "Ааа, да, я слышал",
       id: 4,
       date: "2020-10-11T12:09:04.712Z",
@@ -42,8 +40,7 @@ const dialog = [
       is: "my",
     },
     {
-      avatar:
-        "https://sun9-58.userapi.com/c836638/v836638514/867c/SPMigNB8gw0.jpg",
+      avatar: myAvatar,
       message: "Круто",
       id: 5,
       date: "2020-10-11T13:01:04.712Z",
@@ -51,8 +48,7 @@ const dialog = [
       is: "my",
     },
     {
-      avatar:
-        "https://sun9-58.userapi.com/c836638/v836638514/867c/SPMigNB8gw0.jpg",
+      avatar: myAvatar,
       message: "Полет нормальный?",
       id: 6,
       date: "2020-10-11T14:09:07.712Z",
@@ -60,8 +56,7 @@ const dialog = [
       is: "my",
     },
     {
-      avatar:
-        "https://sun9-2.userapi.com/c638729/v638729951/1d0ea/f9V7aJyh6tw.jpg",
+      avatar: herAvatar,
       message: "Да, все круто. Только никому не говори)",
       id: 7,
       date: "2020-10-11T15:09:04.712Z",
@@ -69,4 +64,4 @@ const dialog = [
     },
   ];
   
-  export default dialog;
+  export default data;

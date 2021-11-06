@@ -1,8 +1,8 @@
 import c from './message.module.css';
 import PropTypes from 'prop-types';
 import dayjs from 'dayjs';
-import { IoIosTrash } from 'react-icons';
-import Icon from '../../icon/Icon';
+import { IoIosTrash } from 'react-icons/io';
+import Icon from '../../../icon/Icon';
 
 function Message (props){
     const {id, text, date, status} = props;

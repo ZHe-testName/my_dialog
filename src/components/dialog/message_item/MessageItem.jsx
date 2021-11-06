@@ -1,6 +1,9 @@
 import c from './message_item.module.css';
 import PropTypes from 'prop-types';
 import Message from './message/Message';
+import dayjs from 'dayjs';
+import Icon from '../../icon/Icon';
+import { IoIosTrash } from 'react-icons/io';
 
 
 function MessageItem ({ isReverse, isRemovable, messages, avatar }){
@@ -14,7 +17,25 @@ function MessageItem ({ isReverse, isRemovable, messages, avatar }){
 
             <div className={c.list}>
                 {
-                    messages.map(item => <Message {...item}/>)
+                    messages.map(item => (
+                        <div className={c.message} key={item.id}>
+                            <div className={c.text}>{item.text}</div>
+
+                            <div className={c.time}>{dayjs(item.date).format('HH:mm')}</div>
+
+                            <Icon 
+                                className={c.messageStatus}
+                                size={15}
+                                name={
+                                    item.status === 'sended' ? 'MessageSended' : 'MessageReaded'
+                                }/>
+
+                            <IoIosTrash
+                                data-id={item.id}
+                                className={c.removeMessage}
+                                size={20}/>
+                        </div>
+                    ))
                 }
             </div>
         </div>
