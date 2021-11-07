@@ -1,6 +1,7 @@
 import './App.css';
 import Dialogs from './components/dialog/Dialog';
 import Header from './components/header/Header';
+import Sender from './components/sender/Sender';
 
 function App() {
   return (
@@ -8,6 +9,8 @@ function App() {
       <Header />
 
       <Dialogs />
+
+      <Sender />
     </div>
   );
 }

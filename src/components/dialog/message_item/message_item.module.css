@@ -36,6 +36,10 @@
     margin-top: 5px;
 }
 
+.reverse .message{
+  flex-direction: row-reverse;
+}
+
 .text{
     max-width: 400px;
     padding: 5px 8px;
