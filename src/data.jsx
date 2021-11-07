@@ -1,4 +1,4 @@
-const myAvatar = 'https://cdn1.flamp.ru/244e3482d83cc86917d4f007177a2b12.jpg',
+export const myAvatar = 'https://cdn1.flamp.ru/244e3482d83cc86917d4f007177a2b12.jpg',
   herAvatar = 'https://i.pinimg.com/originals/e0/7e/cd/e07ecda8f4483bd45a4cb819a86a9fbd.jpg';
 
 const data = [

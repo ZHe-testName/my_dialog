@@ -1,16 +1,20 @@
+import { useState } from 'react';
 import './App.css';
 import Dialogs from './components/dialog/Dialog';
 import Header from './components/header/Header';
 import Sender from './components/sender/Sender';
+import { myAvatar } from './data';
 
 function App() {
+  const [message, addMessage] = useState(null);
+
   return (
     <div className="container">
       <Header />
 
-      <Dialogs />
+      <Dialogs message={message}/>
 
-      <Sender />
+      <Sender addMessage={addMessage} userAvatarUrl={myAvatar}/>
     </div>
   );
 }

@@ -6,7 +6,12 @@ import Icon from '../../icon/Icon';
 import { IoIosTrash } from 'react-icons/io';
 
 
-function MessageItem ({ isReverse, isRemovable, messages, avatar }){
+function MessageItem ({ isReverse, isRemovable, messages, avatar, onRemove }){
+    const onRemoveHandler = e => {
+        const { id } = e.currentTarget.dataset;
+
+        onRemove(+id);
+    };
     return (
         <div
             className={`${c.item} ${isReverse && c.reverse} ${isRemovable && c.removable}`}>
@@ -33,7 +38,8 @@ function MessageItem ({ isReverse, isRemovable, messages, avatar }){
                             <IoIosTrash
                                 data-id={item.id}
                                 className={c.removeMessage}
-                                size={20}/>
+                                size={20}
+                                onClick={onRemoveHandler}/>
                         </div>
                     ))
                 }
@@ -54,6 +60,7 @@ MessageItem.propTypes = {
         status: PropTypes.oneOf(["sended", "readed"]),
       })
     ).isRequired,
+    onRemove: PropTypes.func.isRequired,
   };
 
 export default  MessageItem;

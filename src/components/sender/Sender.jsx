@@ -1,7 +1,8 @@
 import { useState } from 'react';
+import PropTypes from 'prop-types';
 import c from './sender.module.css';
 
-function Sender (){
+function Sender ({addMessage, userAvatarUrl}){
     const [value, setValue] = useState('');
 
     const onChange = e => {
@@ -11,7 +12,16 @@ function Sender (){
     const onSubmit = e => {
         e.preventDefault();
 
-        console.log(value);
+        addMessage({
+            id: Date.now(),
+            avatar: userAvatarUrl,
+            message: value,
+            date: new Date().toISOString(),
+            is: 'my',
+            status: 'sended',
+        });
+
+        setValue('');
     };
 
     return (
@@ -28,6 +38,11 @@ function Sender (){
             <button>Send</button>
         </form>
     );
+};
+
+Sender.propTypes = {
+    addMessage: PropTypes.func.isRequired,
+    userAvatarUrl: PropTypes.string.isRequired,
 };
 
 export default Sender;
