@@ -1,12 +1,11 @@
 .theme{
     cursor: pointer;
-    margin-left: auto;
 }
 
 .theme svg.moon path{
     fill: var(--dark);
 }
 
-svg.sun path{
-    fill: var(--ligth);
+.theme  svg.sun path{
+    fill: var(--yellow);
 }
