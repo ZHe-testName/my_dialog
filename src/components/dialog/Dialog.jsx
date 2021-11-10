@@ -1,10 +1,11 @@
-import { normalizeDialog } from '../../helpers';
+import { normalizeDialog } from '../../helpars/normalize';
 import data from '../../data';
 import PropTypes from 'prop-types';
 import c from './dialog.module.css';
 import MessageItem from './message_item/MessageItem';
 import { useEffect, useReducer, useRef } from 'react';
 import dialogsReducer, { ADD_MESSAGE, REMOVE_MESSAGE, UPDATE_STATUS } from '../../reducers/dialogs_reducer';
+import TitleDate from './title_date/TitleDate';
 
 function Dialogs ({ message }){
     const dialogsRef = useRef();
@@ -49,7 +50,11 @@ function Dialogs ({ message }){
         <div className={c.dialog}>
             <div className={c.overflow} ref={dialogsRef}>
                 {
-                    normalizedDialog.map(item => <MessageItem {...item} key={item.id} onRemove={onRemove}/>)
+                    normalizedDialog.map(item => (
+                        item.type === 'message'
+                            ? <MessageItem {...item} key={item.id} onRemove={onRemove}/>
+                            : <TitleDate key={item.id} date={item.date}/>
+                    ))
                 }
             </div>
         </div>

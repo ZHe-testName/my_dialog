@@ -1,6 +1,5 @@
 import c from './message_item.module.css';
 import PropTypes from 'prop-types';
-import Message from './message/Message';
 import dayjs from 'dayjs';
 import Icon from '../../icon/Icon';
 import { IoIosTrash } from 'react-icons/io';
@@ -12,6 +11,7 @@ function MessageItem ({ isReverse, isRemovable, messages, avatar, onRemove }){
 
         onRemove(+id);
     };
+
     return (
         <div
             className={`${c.item} ${isReverse && c.reverse} ${isRemovable && c.removable}`}>
